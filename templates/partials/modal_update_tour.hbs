@@ -1,0 +1,80 @@
+<div class='modal fade' id='modal-update-tour' tabindex='-1'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Input fields to update</h5>
+        <button
+          type='button'
+          class='btn-close'
+          data-bs-dismiss='modal'
+        ></button>
+      </div>
+      <div class='modal-body'>
+        {{#with tour}}
+          <form>
+            <input
+              type='text'
+              id='title'
+              name='title'
+              class='form-control'
+              placeholder='Title'
+              autofocus=''
+            />
+            <input
+              type='text'
+              id='description'
+              name='description'
+              class='form-control'
+              placeholder='Description'
+              autofocus=''
+            />
+            <input
+              type='date'
+              id='from'
+              name='from'
+              class='form-control'
+              placeholder='From Date (MM-DD-YYYY)'
+              autofocus=''
+            />
+            <input
+              type='date'
+              id='to'
+              name='to'
+              class='form-control'
+              placeholder='To Date (MM-DD-YYYY)'
+              autofocus=''
+            />
+            <input
+              type='number'
+              id='cost'
+              name='cost'
+              class='form-control'
+              placeholder='Tour Cost'
+              autofocus=''
+            />
+            <input
+              type='number'
+              id='seats'
+              name='seats'
+              class='form-control'
+              placeholder='No. of seats'
+              autofocus=''
+            />
+            <div class='modal-footer'>
+              <button
+                id='update-btn'
+                type='submit'
+                class='btn btn-success float-end'
+              >UPDATE</button>
+              <button
+                type='button'
+                class='btn btn-secondary'
+                data-bs-dismiss='modal'
+              >Close</button>
+            </div>
+          </form>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</div>

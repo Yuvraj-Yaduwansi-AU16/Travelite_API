@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>html_headers}}
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-between">
+        <div>
+            {{>nav}}
+            {{>error}}
+            {{>tour_profile}}
+        </div>
+        <div>
+            {{>home_footer}}
+        </div>
+    </div>
+
+    {{>modal_photo_tour}}
+    {{>modal_update_tour}}
+
+    <div id="js-entry"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="/js/tour.js"></script>
+    <script src="/js/review.js"></script>
+</body>
+</html>

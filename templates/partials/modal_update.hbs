@@ -1,0 +1,80 @@
+<div class='modal fade' id='modal-update' tabindex='-1'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Input fields to update</h5>
+        <button
+          type='button'
+          class='btn-close'
+          data-bs-dismiss='modal'
+        ></button>
+      </div>
+      <div class='modal-body'>
+        {{#with agency}}
+          <form>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              class='form-control'
+              placeholder='Agency name'
+              autofocus=''
+            />
+            <input
+              type='text'
+              id='description'
+              name='description'
+              class='form-control'
+              placeholder='Description'
+              autofocus=''
+            />
+            <input
+              type='text'
+              id='address'
+              name='address'
+              class='form-control'
+              placeholder='Agency Address'
+              autofocus=''
+            />
+            <input
+              type='text'
+              id='website'
+              name='website'
+              class='form-control'
+              placeholder='Agency Website'
+              autofocus=''
+            />
+            <input
+              type='email'
+              id='email'
+              name='email'
+              class='form-control'
+              placeholder='Email address'
+              autofocus=''
+            />
+            <input
+              type='tel'
+              id='phone'
+              name='phone'
+              class='form-control'
+              placeholder='Phone Number'
+              autofocus=''
+            />
+            <div class='modal-footer'>
+              <button
+                id='update-btn'
+                type='submit'
+                class='btn btn-success float-end'
+              >UPLOAD</button>
+              <button
+                type='button'
+                class='btn btn-secondary'
+                data-bs-dismiss='modal'
+              >Close</button>
+            </div>
+          </form>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</div>

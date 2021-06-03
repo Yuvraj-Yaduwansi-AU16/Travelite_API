@@ -1,0 +1,105 @@
+<div class='modal fade' id='modal-update-review' tabindex='-1'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title' id='exampleModalLabel'>Modal title</h5>
+        <button
+          type='button'
+          class='btn-close'
+          data-bs-dismiss='modal'
+          aria-label='Close'
+        ></button>
+      </div>
+      <div class='modal-body'>
+        <form>
+          <div>
+            <div class='d-flex mb-2'>
+              <span class='text-center mx-3'>Rating: </span>
+              <div class='form-check form-check-inline'>
+                <input
+                  class='upR form-check-input bg-dark'
+                  type='radio'
+                  name='rating'
+                  id='inlineRadio1'
+                  value='1'
+                />
+                <label class='form-check-label' for='inlineRadio1'>1</label>
+              </div>
+              <div class='form-check form-check-inline'>
+                <input
+                  class='upR form-check-input bg-dark'
+                  type='radio'
+                  name='rating'
+                  id='inlineRadio2'
+                  value='2'
+                />
+                <label class='form-check-label' for='inlineRadio2'>2</label>
+              </div>
+              <div class='form-check form-check-inline'>
+                <input
+                  class='upR form-check-input bg-dark'
+                  type='radio'
+                  name='rating'
+                  id='inlineRadio3'
+                  value='3'
+                />
+                <label class='form-check-label' for='inlineRadio3'>3</label>
+              </div>
+              <div class='form-check form-check-inline'>
+                <input
+                  class='upR form-check-input bg-dark'
+                  type='radio'
+                  name='rating'
+                  id='inlineRadio4'
+                  value='4'
+                />
+                <label class='form-check-label' for='inlineRadio4'>4</label>
+              </div>
+              <div class='form-check form-check-inline'>
+                <input
+                  class='upR form-check-input bg-dark'
+                  type='radio'
+                  name='rating'
+                  id='inlineRadio5'
+                  value='5'
+                />
+                <label class='form-check-label' for='inlineRadio5'>5</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input
+              id='up-t'
+              type='text'
+              class='form-control'
+              placeholder='Title'
+              name='title'
+            />
+          </div>
+          <div class='d-flex'>
+            <div class='input-group'>
+              <textarea
+                id='up-tt'
+                class='form-control'
+                name='text'
+                placeholder='Comment'
+              ></textarea>
+            </div>
+          </div>
+          <div class='modal-footer'>
+            <button
+              id='update-review-btn'
+              type='button'
+              class='btn btn-success float-end'
+            >UPDATE</button>
+            <button
+              type='button'
+              class='btn btn-secondary'
+              data-bs-dismiss='modal'
+            >Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

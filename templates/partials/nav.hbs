@@ -1,0 +1,29 @@
+<nav class='navbar navbar-dark bg-dark py-3'>
+  <span class='float-start d-flex'>
+    <a
+      href='#'
+      class='navbar-brand ps-3 pe-3 border-end border-light'
+      style='color: #da2828;'
+    >
+      Travelite India
+    </a>
+    <a href='/' class='nav-item nav-link'>HOME</a>
+  </span>
+
+  <span class='float-end d-flex'>
+    {{#if username}}
+      <a href='/users/{{id}}' class='nav-item nav-link text-light'>Signed in as
+        <span class='text-success text-uppercase ps-2'>{{username}}</span>
+      </a>
+      <form action='/auth/logout' method='POST'>
+        <button
+          type='submit'
+          class='border-0 bg-dark me-3 nav-link nav-item'
+        >LOGOUT</button>
+      </form>
+    {{else}}
+      <a href='/login' class='nav-item nav-link'>LOGIN</a>
+      <a href='/signup' class='nav-item nav-link me-3'>SIGN UP</a>
+    {{/if}}
+  </span>
+</nav>

@@ -1,0 +1,118 @@
+<div class='bg-secondary'>
+    <div class='d-flex container'>
+      <div class='w-25 my-auto'>
+        <img
+          src='/uploads/{{agency.photo}}'
+          alt='...'
+          class='img-fluid'
+          style='max-height: 250px; width: 100%'
+        />
+        {{#if username}}
+        <button
+          type='button'
+          class='btn btn-primary mt-3 w-100'
+          data-bs-toggle='modal'
+          data-bs-target='#modal-photo'
+        >
+          Change Profile Photo
+        </button>
+        {{/if}}
+      </div>
+      <div class='d-flex flex-column justify-content-between w-75 p-5'>
+        {{#with agency}}
+        <div>
+          <h2 class='text-uppercase text-light'>{{name}}</h2>
+          <hr />
+          <div class='d-flex'>
+            <span class='w-50'>Website: {{website}} </span>
+            <span class='w-50'>Email: {{email}}</span>
+          </div>
+          <div class='d-flex'>
+            <span class='w-50'>Phone: {{phone}} </span>
+            <span class='w-50'>Address: {{address}}</span>
+          </div>
+          <div class='me-5 mt-2'>Description:
+            {{description}}</div>
+        </div>
+        {{/with}}
+        <div>
+          {{#if username}}
+          <div class='float-end pt-5'>
+            <button
+              id='id-hack'
+              type='button'
+              class='btn btn-warning'
+              data-bs-toggle='modal'
+              data-bs-target='#modal-update'
+            >
+              Update Profile
+            </button>
+            <button id='delete-btn' class='btn btn-danger ms-3'>Delete Profile</button>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+</div>
+<div class='bg-dark py-5'>
+  <h3 class='text-light container'>Our Tours
+    {{#if username}}
+    <button
+      type='button'
+      class='btn btn-success float-end'
+      data-bs-toggle='modal'
+      data-bs-target='#modal-create'>
+      Create Tour
+    </button>
+    {{/if}}
+  </h3>
+  <hr class='text-light' />
+  {{#with agency}}
+  <div class='container pt-3'>
+      <ul class='list-group'>
+        {{#each tours}}
+          <li class='list-group-item d-flex mb-2 py-3 rounded'>
+            {{#with this}}
+              <div class='w-25'>
+                <img
+                  src='/uploads/{{photo}}'
+                  alt='...'
+                  class='img-thumbnail'
+                  style='width: 300px; height: 200px'
+                />
+              </div>
+              <div class='d-flex flex-column justify-content-between ms-4 w-75'>
+                <div>
+                  <h5 class='card-title text-info'>
+                    {{title}}
+                    <span class="text-danger float-end me-5">Seats Left: {{seats}}</span>
+                  </h5>
+                  <h6 class='card-subtitle mb-2 text-muted'>
+                    From:
+                    {{from}}
+                    - To:
+                    {{to}}<br />
+                    Duration:
+                    {{duration}}<br />
+                    Cost: $
+                    {{cost}}
+                  </h6>
+                  <p class='text-truncate me-5'>Description:
+                    {{description}}</p>
+                </div>
+                <div class='me-3 d-flex'>
+                  <a href='/tours/{{_id}}/enroll' class='btn btn-secondary w-50 me-3'>
+                    Book Tour
+                  </a>
+                  <a href='/tours/{{_id}}' class='btn btn-primary w-50 ms-3'>
+                    Get Tour Info
+                  </a>
+                </div>
+              </div>
+            {{/with}}
+          </li>
+        {{/each}}
+      </ul>
+    {{/with}}
+  </div>
+</div>

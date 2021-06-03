@@ -1,0 +1,71 @@
+<div id='logreg-forms'>
+  <form
+    class='form-signup pb-5'
+    action='/auth/register'
+    method='POST'
+    enctype='multipart/form-data'
+  >
+    <h1 class='h3 mb-3 font-weight-normal text-center'>Sign Up</h1>
+    <div class='social-login'>
+      <button class='btn facebook-btn social-btn' type='button'>
+        <span>
+          <i class='fab fa-facebook-f'></i>
+          Sign up with Facebook
+        </span>
+      </button>
+    </div>
+    <div class='social-login'>
+      <button class='btn google-btn social-btn' type='button'>
+        <span>
+          <i class='fab fa-google-plus-g'></i>
+          Sign up with Google+
+        </span>
+      </button>
+    </div>
+    <p style='text-align:center'>OR</p>
+    <input
+      type='text'
+      id='user-name'
+      class='form-control'
+      placeholder='Full name'
+      required=''
+      autofocus=''
+      name='name'
+    />
+    <input
+      type='email'
+      id='user-email'
+      class='form-control'
+      placeholder='Email address'
+      required
+      autofocus=''
+      name='email'
+    />
+    <input
+      type='password'
+      id='user-pass'
+      class='form-control'
+      placeholder='Password'
+      required
+      autofocus=''
+      name='password'
+    />
+
+    <div class='input-group mb-3'>
+      <label class='input-group-text' for='inputGroupSelect01'>Options</label>
+      <select class='form-select' id='inputGroupSelect01' name='role'>
+        <option selected value='user'>User</option>
+        <option value='organiser'>Organiser</option>
+      </select>
+    </div>
+
+    <button class='btn btn-primary w-100 mt-5' type='submit'>
+      <i class='fas fa-user-plus'></i>
+      Sign Up
+    </button>
+    <a href='/login' id='cancel_signup' class='my-3'>
+      <i class='fas fa-angle-left'></i>
+      Back to login
+    </a>
+  </form>
+</div>

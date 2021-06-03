@@ -1,0 +1,15 @@
+body{
+    background-image: url('/uploads/bg-2.jpg');
+}
+#logreg-forms{
+    border: 2px solid #3C589C;
+    border-radius: 10px;
+    width: 450px;
+    background-color:#f3f3f3;
+}
+
+@media screen and (max-width:650px){
+    #logreg-forms{
+        width:300px;
+    }
+}

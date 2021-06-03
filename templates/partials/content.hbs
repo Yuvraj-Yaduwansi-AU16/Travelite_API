@@ -1,0 +1,100 @@
+<div class='container mb-3'>
+  <h3 class='text-muted mt-5 m-3'>Upcoming Tours
+    <a href='/tours' class='float-end btn btn-dark me-5 px-5'>View All</a>
+  </h3>
+  <hr />
+  <div class='bg-light d-flex flex-wrap justify-content-evenly'>
+    {{#each tours}}
+      <div id='tours' class='card m-3'>
+        {{#with this}}
+          <img
+            src='/uploads/{{photo}}'
+            class='card-img-top'
+            alt='...'
+            style='max-height: 250px;'
+          />
+          <div class='card-body'>
+            <h5 class='card-title text-info mb-3'>
+              {{title}}
+              <span class='float-end text-danger'>~
+                {{daysleft}}
+                days left</span>
+            </h5>
+            <h6 class='card-subtitle mb-2 text-muted'>
+              From:
+              {{from}}
+              - To:
+              {{to}}
+              <span class='text-muted float-end'>
+                Seats:
+                {{seats}}
+              </span>
+              <br />
+              Duration:
+              {{duration}}
+              days
+              <span class='float-end'>Cost:
+                <span class='text-success'>$ {{cost}}</span></span>
+            </h6>
+            <p class='card-text text-truncate mt-2'>
+              <span class='fw-bold text-muted'>
+                Description:
+              </span>{{description}}
+            </p>
+            <div class='me-3 d-flex'>
+              <a
+                href='/tours/{{_id}}/enroll'
+                class='btn btn-secondary w-50 me-3'
+              >
+                Book Tour
+              </a>
+              <a href='/tours/{{_id}}' class='btn btn-primary w-50 ms-3'>
+                Get Tour Info
+              </a>
+            </div>
+          </div>
+        {{/with}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+<div class='bg-success py-3'>
+  <h3 class='text-light mt-3 ms-5'>Our Organising Partners
+    <a href='/agency' class='float-end btn btn-dark me-5 px-5'>View All</a>
+  </h3>
+  <hr />
+  <div class='py-5 container d-flex flex-wrap'>
+    {{#each agency}}
+      <div class='card m-3' style='width: 18rem;'>
+        {{#with this}}
+          <img
+            src='/uploads/{{photo}}'
+            class='card-img-top'
+            alt='...'
+            style='max-height: 150px;'
+          />
+          <div class='card-body'>
+            <h5 class='card-title text-info'>{{name}}</h5>
+            <h6 class='card-subtitle mb-2 text-muted'>{{website}}</h6>
+            <p class='card-text text-truncate'>{{description}}</p>
+            <a
+              href='/agency/{{_id}}'
+              class='btn btn-secondary flex-end w-100'
+            >Explore More</a>
+          </div>
+        {{/with}}
+      </div>
+    {{/each}}
+  </div>
+  <div class='d-flex flex-column pb-3'>
+    <h4 class='text-light text-center'>Join Us and Create Your Own Agency!</h4>
+    <span class='d-flex justify-content-center mt-3'>
+      {{#if userrole}}
+        <a href='/newagency' class='btn btn-dark btn-lg px-5'>Create Agency</a>
+      {{else}}
+        <h5 class='text-light text-center'>To create your own agency sign in as
+          an Organiser</h5>
+      {{/if}}
+    </span>
+  </div>
+</div>

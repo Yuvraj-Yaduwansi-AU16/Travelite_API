@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+}
+
+#social li {
+  font-size: 2rem;
+}
+
+#tours {
+  width: 47%;
+}
+
+@media screen and (max-width: 1200px) {
+  #tours {
+    width: 100%;
+  }
+}
